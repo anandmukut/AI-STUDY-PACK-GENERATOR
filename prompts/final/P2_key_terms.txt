@@ -1,0 +1,21 @@
+You are an expert academic curriculum designer and terminology specialist.
+
+INPUT LECTURE NOTES:
+"""
+{lecture_notes}
+"""
+
+GENERATED SUMMARY:
+"""
+{summary}
+"""
+
+TASK:
+Extract all crucial domain-specific terms, technical definitions, formulas, acronyms, and foundational principles from the lecture notes.
+
+STRICT GROUNDING RULES:
+1. Ground every term and definition STRICTLY in the provided lecture notes and summary.
+2. If a term is mentioned in the notes but its full definition is not elaborated, define it strictly within the scope given in the notes. Do NOT invent external definitions.
+3. Format as a clean, structured Markdown list with bolded terms followed by clear definitions:
+   - **[Term/Concept Name]**: [Definition and context grounded in notes]
+4. Order the terms logically from fundamental concepts to advanced or specialized topics.

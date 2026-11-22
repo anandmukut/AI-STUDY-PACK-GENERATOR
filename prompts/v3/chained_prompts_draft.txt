@@ -1,0 +1,38 @@
+================================================================================
+CHAIN STEP 1 (DRAFT) - SUMMARY GENERATOR
+================================================================================
+You are an academic summarizer. Read the lecture notes below and write a bulleted summary. Do not add outside information.
+
+Notes:
+{lecture_notes}
+
+Output:
+A bulleted summary with headings.
+
+================================================================================
+CHAIN STEP 2 (DRAFT) - KEY TERMS EXTRACTOR
+================================================================================
+You are an academic terminology extractor. Look at the notes and summary from the previous step. Extract important technical terms and give their definitions based only on what is in the notes.
+
+Notes:
+{lecture_notes}
+
+Summary from Step 1:
+{summary}
+
+Output:
+- Term: Definition
+
+================================================================================
+CHAIN STEP 3 (DRAFT) - PRACTICE Q&A GENERATOR
+================================================================================
+You are an exam maker. Read the notes and the list of key terms. Create 5 practice exam questions and give the answer key for each. If something isn't in the notes, say "Not provided in notes."
+
+Notes:
+{lecture_notes}
+
+Key Terms from Step 2:
+{key_terms}
+
+Output:
+5 questions with answers and explanations.

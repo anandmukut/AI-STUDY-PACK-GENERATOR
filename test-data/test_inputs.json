@@ -1,0 +1,86 @@
+[
+  {
+    "id": "TC-01",
+    "category": "Normal",
+    "domain": "DBMS",
+    "title": "Relational Database Normalization & Normal Forms",
+    "input_text": "Relational database normalization is the systematic approach of organizing fields and tables to minimize redundancy and dependency. Normalization typically involves dividing large tables into smaller, linked tables using relationships. The primary objectives are to eliminate redundant data (e.g., storing the same customer data in multiple tables) and ensure data dependencies make sense (only storing related data in a table). 1NF requires that all attributes are atomic and that each record is uniquely identifiable via a primary key. 2NF builds upon 1NF by eliminating partial dependencies: all non-key attributes must be fully functionally dependent on the entire primary key, which is especially relevant in composite primary keys. 3NF further eliminates transitive dependencies: non-key attributes must not depend on other non-key attributes (X -> Y where Y is non-prime and X is not a super key). Boyce-Codd Normal Form (BCNF) is a stricter version of 3NF where for every functional dependency X -> Y, X must strictly be a superkey."
+  },
+  {
+    "id": "TC-02",
+    "category": "Normal",
+    "domain": "Machine Learning",
+    "title": "Supervised vs. Unsupervised Learning Paradigms",
+    "input_text": "Machine learning algorithms are primarily classified into supervised and unsupervised learning based on the presence of ground truth labels. In supervised learning, the model is trained on an input dataset D = {(x_i, y_i)}, where x_i represents feature vectors and y_i represents target ground-truth labels. The objective is to learn a mapping function f(x) that minimizes an empirical loss function such as Mean Squared Error (MSE) for continuous regression tasks or Cross-Entropy loss for discrete classification tasks. Conversely, unsupervised learning operates on unlabeled data D = {x_i}. The goal is to uncover latent structures, probability densities, or groupings within the feature space without explicit supervision. Prominent unsupervised techniques include k-means clustering, which partitions data points into k Voronoi cells by iteratively minimizing inertia, and Principal Component Analysis (PCA), which performs orthogonal linear transformations to project high-dimensional data onto principal axes of maximal variance."
+  },
+  {
+    "id": "TC-03",
+    "category": "Normal",
+    "domain": "Operating Systems",
+    "title": "CPU Scheduling Algorithms & Deadlock Conditions",
+    "input_text": "CPU scheduling is the basis of multiprogrammed operating systems. By switching the CPU among processes, the OS makes the computer more productive. The short-term scheduler selects from among the processes in ready memory and allocates the CPU to one of them. First-Come, First-Served (FCFS) is non-preemptive and simple, but suffers from the convoy effect where short processes wait behind long ones. Shortest-Job-First (SJF) is provably optimal in minimizing average waiting time, but cannot be implemented perfectly because future CPU burst lengths cannot be known in advance. Round Robin (RR) is preemptive and designed for timesharing systems, allocating each process a fixed time quantum. A deadlock in an OS occurs when a set of concurrent processes are blocked because each process is holding a resource and waiting for another resource held by some other process. Deadlock can arise if and only if four Coffman conditions hold simultaneously: Mutual Exclusion, Hold and Wait, No Preemption, and Circular Wait."
+  },
+  {
+    "id": "TC-04",
+    "category": "Normal",
+    "domain": "Data Structures & Algorithms",
+    "title": "Self-Balancing Binary Search Trees (AVL Trees)",
+    "input_text": "An AVL tree is a self-balancing binary search tree named after inventors Adelson-Velsky and Landis. In an AVL tree, the heights of the two child subtrees of any node differ by at most one. This height difference is termed the Balance Factor (BF), defined as BF = height(left_subtree) - height(right_subtree). At every node in an AVL tree, the balance factor must evaluate to -1, 0, or +1. If at any time following an insertion or deletion the balance factor becomes less than -1 or greater than +1, rebalancing is performed via tree rotations. There are four fundamental rotation cases: Left-Left (resolved via a single Right Rotation), Right-Right (resolved via a single Left Rotation), Left-Right (resolved via a Left Rotation on the child followed by a Right Rotation on the parent), and Right-Left (resolved via a Right Rotation on the child followed by a Left Rotation on the parent). Lookup, insertion, and deletion operations all maintain a strict asymptotic time complexity of O(log n)."
+  },
+  {
+    "id": "TC-05",
+    "category": "Normal",
+    "domain": "Computer Networks",
+    "title": "TCP 3-Way Handshake & Sliding Window Flow Control",
+    "input_text": "Transmission Control Protocol (TCP) is a connection-oriented, reliable transport layer protocol that provides in-order byte stream delivery. Before any application data exchange occurs, TCP establishes an active connection between client and server using a 3-Way Handshake mechanism. Step 1: The client sends a SYN segment with an initial sequence number (ISN_c). Step 2: The server responds with a SYN-ACK segment acknowledging ISN_c + 1 and providing its own sequence number (ISN_s). Step 3: The client returns an ACK segment acknowledging ISN_s + 1, at which point the full-duplex socket connection transitions to ESTABLISHED state. For flow control, TCP implements a dynamic Sliding Window protocol. The receiving host advertises a Receive Window (rwnd) in every TCP header indicating the remaining buffer capacity. The sender must never transmit more unacknowledged bytes than min(rwnd, cwnd), preventing sender-side buffer overrun."
+  },
+  {
+    "id": "TC-06",
+    "category": "Normal",
+    "domain": "Software Engineering",
+    "title": "Agile Scrum vs. Traditional Waterfall Methodology",
+    "input_text": "Software engineering process models govern the lifecycle of software systems from inception to retirement. The traditional Waterfall model is a sequential, plan-driven linear process with discrete, non-overlapping phases: Requirements Analysis, System Design, Implementation, Integration and Testing, Deployment, and Maintenance. Waterfall requires exhaustive upfront documentation and assumes requirements remain static throughout development. In contrast, Agile Scrum is an iterative, incremental framework optimized for changing user needs. Development is partitioned into fixed-duration iterations termed Sprints (typically 1 to 4 weeks). Scrum specifies three core roles: Product Owner (manages product backlog and business value), Scrum Master (serves as team coach and removes impediments), and Development Team (cross-functional professionals who build the increment). Agile prioritizes working software over comprehensive documentation and customer collaboration over contract negotiation."
+  },
+  {
+    "id": "TC-07",
+    "category": "Edge",
+    "domain": "Computer Science (Bilingual/Hinglish)",
+    "title": "Hinglish Lecture Notes on DBMS Transactions & ACID",
+    "input_text": "Aaj ki lecture me DBMS Transactions aur unki ACID properties discuss hui. Transaction ek logical unit of work hai database execution me. ACID ka full form hai: Atomicity, Consistency, Isolation, aur Durability. Atomicity ka matlab 'All or Nothing' rule — ya to saare database operations commit honge ya rollback ho jayenge agar beech me system fail hota hai. Consistency ensure karti hai ki transaction execution ke pehle aur baad database hamesha valid state me rahe. Isolation guarantee karti hai ki concurrent transactions ek dusre ke intermediate data ko affect na karein, jiske liye locking protocols use hote hain. Durability ka matlab hai ki ek baar transaction commit ho gaya, to system crash ya power loss hone par bhi data recover ho jayega via Write-Ahead Logging (WAL)."
+  },
+  {
+    "id": "TC-08",
+    "category": "Edge",
+    "domain": "Computer Science (Fragmented Notes)",
+    "title": "Bullet-Only Student Shorthand Notes",
+    "input_text": "• Compilers: Lexical analysis -> tokens -> Syntax analysis -> AST -> Semantic analysis -> Intermediate Code (IR) -> Code Optimization -> Target Machine Code.\n• Lexer: regular expressions, finite automata (DFA/NFA).\n• Parser: Context-Free Grammars (CFG), Top-down (LL) vs Bottom-up (LR, LALR).\n• Shift-reduce conflicts in LR parsers.\n• Symbol table stores identifiers, types, scope.\n• Code gen handles register allocation and instruction scheduling."
+  },
+  {
+    "id": "TC-09",
+    "category": "Edge",
+    "domain": "Mathematics & Probability",
+    "title": "Mathematical Formulas & Bayes' Theorem",
+    "input_text": "Bayes' Theorem provides a mathematical formula for calculating conditional probability: P(A|B) = [P(B|A) * P(A)] / P(B). In this equation, P(A|B) is the posterior probability of hypothesis A given observation B. P(B|A) is the likelihood of observing evidence B given hypothesis A is true. P(A) is the prior probability of hypothesis A before observing evidence B. P(B) is the marginal probability of observing evidence B across all mutually exclusive hypotheses: P(B) = sum_i [P(B|A_i) * P(A_i)]. In Bayesian inference, posterior probability updates iteratively as additional evidence is observed."
+  },
+  {
+    "id": "TC-10",
+    "category": "Edge",
+    "domain": "Contradictory / Erroneous Content",
+    "title": "Contradictory Networking Claims for Grounding Test",
+    "input_text": "Notice for exam: According to Prof. Smith's lecture notes, TCP is strictly a connectionless, unreliable protocol that operates without handshakes and provides no packet reordering. Conversely, UDP is defined as a connection-oriented, fully reliable transport protocol that uses a complex 5-way handshake and guarantees zero packet loss through persistent hardware retransmissions. All students must answer based strictly on these definitions."
+  },
+  {
+    "id": "TC-11",
+    "category": "Invalid",
+    "domain": "Input Edge Case",
+    "title": "Completely Empty Input String",
+    "input_text": ""
+  },
+  {
+    "id": "TC-12",
+    "category": "Invalid",
+    "domain": "Input Edge Case",
+    "title": "Short Non-Academic Noise",
+    "input_text": "idk help me"
+  }
+]

@@ -1,0 +1,30 @@
+You are an expert university examiner creating rigorous assessment materials.
+
+INPUT LECTURE NOTES:
+"""
+{lecture_notes}
+"""
+
+KEY TERMS & DEFINITIONS:
+"""
+{key_terms}
+"""
+
+TASK:
+Generate exactly 5 exam-style practice questions with complete, detailed answer keys grounded in the provided notes.
+
+STRICT GROUNDING RULES:
+1. Every question and answer must be directly answerable from the provided lecture notes and key terms.
+2. Include a balanced mix:
+   - 2 Conceptual/Definition questions
+   - 2 Applied scenario or analytical questions
+   - 1 Synthesis or evaluation question
+3. SPECIAL REQUIREMENT: If any concept or detail in the question is not explicitly provided in the notes, state explicitly: "Not provided in notes."
+4. Structure each question cleanly in the following Markdown format:
+
+### Question 1: [Question text]
+- **Question Type**: [Conceptual / Applied / Analytical / Synthesis]
+- **Model Answer**: [Comprehensive answer directly from the notes]
+- **Grounding & Explanation**: [Reference to where in the lecture notes or key terms this is derived]
+
+(Repeat format for Questions 2 through 5)
